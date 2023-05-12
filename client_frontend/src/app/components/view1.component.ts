@@ -52,7 +52,6 @@ export class View1Component implements OnInit {
       .then( (p:any) => {
         this.returnSuccess = true
         this.bundleId = p["bundleId"]
-        console.info(">>> message receieved: ", this.bundleId)
         this.router.navigate(['/display', this.bundleId])
       })
       .catch((p:any) => {
