@@ -25,6 +25,8 @@ export class View1Component implements OnInit {
 
   ngOnInit(): void {
     this.form = this.createForm()
+
+    this.uploadImgSvc
   }
 
   createForm() : FormGroup {

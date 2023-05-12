@@ -8,11 +8,19 @@
                 <button (click)="uploadImage()">Upload</button>
             </td>
         </tr>
+    </table>
 
-        <div>
-            <tr>
-                to display the image content later..
+    <table>
+        <div *ngIf="uploads.length > 0 else emptyList">
+            <tr  *ngFor="let a of uploads" (click)="retrieveArchive(a.bundleId)">
+                <td>{{ a.title | titlecase }}</td>
+                <td>{{ a.upload | date:'MMM d y' }}</td>
             </tr>
         </div>
     </table>
+
 </div>
+
+<ng-template #emptyList>
+    <code>Your storage is empty</code>
+</ng-template>

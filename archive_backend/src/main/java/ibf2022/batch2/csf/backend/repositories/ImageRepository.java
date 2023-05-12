@@ -32,7 +32,7 @@ public class ImageRepository {
         s3.putObject(putReq);
 		
 		// sample endpoint format: https://soonhang-csfassessment.sgp1.digitaloceanspaces.com/myObjectc1746282.blob.png
-		String fileUrl = "https;//" + BUCKETNAME + ".sgp1.digitaloceanspaces.com/" + metadata.getUserMetadata().get("fileName");
+		String fileUrl = "https://" + BUCKETNAME + ".sgp1.digitaloceanspaces.com/image/" + metadata.getUserMetadata().get("fileName");
 		
 		return fileUrl;
 	}
