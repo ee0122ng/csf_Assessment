@@ -1,0 +1,43 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submitForm()" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" formControlName="name" placeholder="Name">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Title:</td>
+                <td>
+                    <input type="text" formControlName="title" placeholder="Title">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Comments:</td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10" formControlName="comments" placeholder="Your comments in here"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Archive:</td>
+                <td>
+                    <input type="file" #image (change)="onFileUpload($event)" accept=".zip">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button>Cancel</button>
+                    <button [disabled]="!isFormValid()">Submit</button>
+                </td>
+            </tr>
+
+        </table>
+    
+    </form>
+</div>
