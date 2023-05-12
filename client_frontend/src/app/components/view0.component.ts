@@ -19,6 +19,7 @@ export class View0Component implements OnInit {
       .then((p:any[]) => {
         return p.map((a:any) => {
           return {
+            bundleId: a["bundleId"],
             title: a["title"],
             name: a["name"],
             upload: new Date(a["uploadDate"]),

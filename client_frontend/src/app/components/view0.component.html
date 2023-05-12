@@ -15,6 +15,7 @@
             <tr  *ngFor="let a of uploads" (click)="retrieveArchive(a.bundleId)">
                 <td>{{ a.title | titlecase }}</td>
                 <td>{{ a.upload | date:'MMM d y' }}</td>
+                <td>{{ a.bundleId }}</td>
             </tr>
         </div>
     </table>
